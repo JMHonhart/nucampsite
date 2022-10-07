@@ -65,9 +65,7 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <div class="col col-sm-6">
-                                    <label for="date" class="col-form-label">Date</label>
-                                </div>
+                                <label for="date" class="col-sm-6 col-form-label">Date</label>
                                 <div class="col">
                                     <input type="date" id="date" name="date" placeholder="mm/dd/yyy">
                                 </div>
@@ -77,11 +75,12 @@
                                 <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-success active">
-                                            <input type="radio" name="siteType" id="siteTent" autocomplete="off"
-                                                checked> Tent
+                                            <input type="radio" name="siteType" id="siteTent" value="tent"
+                                                autocomplete="off" checked> Tent
                                         </label>
                                         <label class="btn btn-primary">
-                                            <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
+                                            <input type="radio" name="siteType" id="siteRV" value="RV"
+                                                autocomplete="off"> RV
                                         </label>
                                     </div>
                                 </div>
@@ -89,7 +88,7 @@
 
                             <div class="row form-group">
                                 <div class="col">
-                                    <button class="btn btn-secondary" type="submit" data-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                     <button class="btn btn-primary" type="submit">Search</button>
                                 </div>
                             </div>
@@ -313,9 +312,9 @@
     </script> -->
 
     <script>
-        $(function() {
-            $(".carousel").carousel( { interval: 2000 } );
-            $("#carouselButton").click(function(){
+        $(function () {
+            $(".carousel").carousel({ interval: 2000 });
+            $("#carouselButton").click(function () {
                 if ($("#carouselButton").children("i").hasClass("fa-pause")) {
                     $(".carousel").carousel("pause");
                     $("#carouselButton").children("i").removeClass("fa-pause");
@@ -323,7 +322,7 @@
                 } else {
                     $(".carousel").carousel("cycle");
                     $("#carouselButton").children("i").removeClass("fa-play");
-                    $("#carouselButton").children("i").addClass("fa-pause"); 
+                    $("#carouselButton").children("i").addClass("fa-pause");
                 }
             });
         });
